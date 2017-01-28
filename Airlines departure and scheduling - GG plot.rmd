@@ -1,0 +1,5 @@
+library(ggplot2)
+r1<- read.csv('cancellation.csv')
+
+r3<-ggplot(data=r1, aes(x=CANCELLATION_REASON, fill= CARRIER))
+r3 + geom_bar() +facet_wrap(~CARRIER)
